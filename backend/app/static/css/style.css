@@ -1,0 +1,166 @@
+
+:root {
+    --primary: #2563eb;
+    --sidebar: #0f172a;
+    --background: #f1f5f9;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+}
+
+.login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+}
+
+.login-card {
+    background: white;
+    width: 400px;
+    max-width: 90%;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px #0002;
+}
+
+.brand-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--sidebar);
+    color: white;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 35px;
+}
+
+.brand-icon-small {
+    color: #60a5fa;
+    font-size: 30px;
+    margin-right: 8px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-nav button,
+.logout-btn {
+    background: transparent;
+    border: 0;
+    color: #cbd5e1;
+    padding: 14px 16px;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sidebar-nav button:hover {
+    background: #1e293b;
+    color: white;
+}
+
+.logout-btn {
+    margin-top: auto;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 35px;
+}
+
+.topbar,
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-badge {
+    background: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+}
+
+.stat-card,
+.table-card {
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+.stat-card p {
+    color: #64748b;
+}
+
+.stat-card h2 {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.table-card {
+    padding: 15px;
+}
+
+.table thead th {
+    color: #64748b;
+    font-size: 13px;
+    padding: 18px;
+}
+
+.table tbody td {
+    padding: 18px;
+}
+
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .topbar,
+    .section-heading {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
